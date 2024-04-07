@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
     const {
@@ -10,6 +11,7 @@ const Register = () => {
         formState: { errors },
       } = useForm()
     
+      const {createUser} = useAuth();
 
       const onSubmit = (data) => {
         const {email, password} = data;
@@ -25,6 +27,13 @@ const Register = () => {
             toast.error("Password must have an lowercase letter");
             return;
         }
+        createUser(email, password)
+        .then(()=>{
+            toast.success("User created successfully")
+        })
+        .catch(error=>{
+           toast.error(error.message.split(":")[1])
+        })
         
       }
 

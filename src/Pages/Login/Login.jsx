@@ -11,7 +11,7 @@ const Login = () => {
       const onSubmit = (data) => {
         const {email, password} = data;
         console.log(email, password)
-        
+
       }
 
     
