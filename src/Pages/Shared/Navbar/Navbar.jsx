@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/logo.png'
+import useAuth from "../../../Hooks/useAuth";
 
 const Navbar = () => {
     const navLinks = <>
@@ -10,6 +11,12 @@ const Navbar = () => {
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/contact">Contact Us</NavLink></li>
     </>
 
+  const {user, logOut} = useAuth();
+  const handleSignout=()=>{
+    logOut()
+    .then()
+    .catch()
+  }
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -45,7 +52,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-          <Link to="/login" className="btn">Login</Link>
+        {
+          user ? <><span>{user.email}</span><button onClick={handleSignout} className="btn">Logout</button></>:<Link to="/login" className="btn">Login</Link>
+        }
+          
       </div>
     </div>
   );

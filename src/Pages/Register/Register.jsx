@@ -98,7 +98,7 @@ const Register = () => {
             <button className="btn text-white text-lg font-semibold bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80">Register</button>
         </div>
       </form>
-      <p className="pb-3 px-6">Already have an acoount? Please <Link className="text-green-700 font-medium underline" to="/login">Login</Link></p>
+      <p className="pb-3 px-6">Already have an account? Please <Link className="text-green-700 font-medium underline" to="/login">Login</Link></p>
     
       <ToastContainer />
       </div>
