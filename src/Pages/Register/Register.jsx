@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const {
@@ -8,9 +10,21 @@ const Register = () => {
         formState: { errors },
       } = useForm()
     
+
       const onSubmit = (data) => {
         const {email, password} = data;
-        console.log(email, password)
+        if(password.length<6){
+            toast.error("Password should be at least 6 characters");
+            return;
+        }
+        if(!/(?=.*[A-Z])/.test(password)){
+            toast.error("Password must have an uppercase letter");
+            return;
+        }
+        if(!/(?=.*[a-z])/.test(password)){
+            toast.error("Password must have an lowercase letter");
+            return;
+        }
         
       }
 
@@ -76,7 +90,9 @@ const Register = () => {
         </div>
       </form>
       <p className="pb-3 px-6">Already have an acoount? Please <Link className="text-green-700 font-medium underline" to="/login">Login</Link></p>
-    </div>
+    
+      <ToastContainer />
+      </div>
     );
 };
 
