@@ -60,7 +60,7 @@
       "image": "https://i.ibb.co/njMJx7T/student-housing.jpg",
       "total_units": 50,
       "occupied_units": 30,
-      "vacancy_rate": "40%",
+      "garage_spaces": 5,
       "year_built": 2018
     },
     {
@@ -76,7 +76,7 @@
       "image": "https://i.ibb.co/w4Gn8Db/communities.webp",
       "total_units": 100,
       "occupied_units": 80,
-      "vacancy_rate": "20%",
+      "garage_spaces": 2,
       "year_built": 2012
     },
     {

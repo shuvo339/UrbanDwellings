@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useLocation,  useNavigate } from "react-router-dom";
 
 
 const Login = () => {
     const {googleSignin, githubSignin} = useAuth();
+    const location = useLocation();
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -19,6 +22,7 @@ const Login = () => {
         signIn(email, password)
         .then(()=>{
             toast.success("You have logged in successfully")
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
@@ -29,6 +33,7 @@ const Login = () => {
         googleSignin()
         .then(()=>{
             toast.success("You have logged in successfully")
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
@@ -38,6 +43,7 @@ const Login = () => {
         githubSignin()
         .then(()=>{
             toast.success("You have logged in successfully")
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
