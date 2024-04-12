@@ -1,6 +1,8 @@
 import Banner from "../../components/Banner/Banner";
 import { useLoaderData} from "react-router-dom";
 import Estates from "../../components/Estates/Estates";
+import Reviews from "../../components/Reviews/Reviews";
+import Blogs from "../../components/Blogs/Blogs";
 
 const Home = () => {
     const estates = useLoaderData();
@@ -16,6 +18,8 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <Blogs></Blogs>
+            <Reviews></Reviews>
         </div>
     );
 };

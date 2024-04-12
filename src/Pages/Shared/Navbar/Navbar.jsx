@@ -1,17 +1,21 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/logo.png'
 import useAuth from "../../../Hooks/useAuth";
+import userPic from '../../../assets/user.jpg'
 
 const Navbar = () => {
+  const {user, logOut} = useAuth();
+  console.log(user)
     const navLinks = <>
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/">Home</NavLink></li>
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/update">Update Profile</NavLink></li>
-    <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/about">About</NavLink></li>
-    <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/register">Register</NavLink></li>
+    {
+      user? <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/user">User Profile</NavLink></li>: ''
+    }
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/contact">Contact Us</NavLink></li>
     </>
 
-  const {user, logOut} = useAuth();
+
   const handleSignout=()=>{
     logOut()
     .then()
@@ -52,10 +56,17 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {
-          user ? <><span>{user.email}</span><button onClick={handleSignout} className="btn">Logout</button></>:<Link to="/login" className="btn bg-[#7E5E60] text-white font-semibold">Login</Link>
-        }
-          
+      {
+        user? <div className="flex gap-3"> 
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component" src={user?.photoURL || userPic} />
+            </div>
+      </div>
+            <button onClick={handleSignout} className="btn bg-[#7E5E60] text-white">Logout</button>
+        </div>:<Link to='/login'><button className="btn bg-[#7E5E60] text-white"> Login</button></Link>
+      }
+    
       </div>
     </div>
   );

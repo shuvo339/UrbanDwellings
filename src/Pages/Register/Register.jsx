@@ -3,18 +3,26 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../../Hooks/useAuth";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useLocation,  useNavigate } from "react-router-dom";
+
 
 const Register = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword]= useState(false);
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm()
     
-      const {createUser} = useAuth();
+      const {createUser, profileUpdate} = useAuth();
 
       const onSubmit = (data) => {
-        const {email, password} = data;
+        const {email, password, name, photo} = data;
+        console.log(name, photo)
         if(password.length<6){
             toast.error("Password should be at least 6 characters");
             return;
@@ -28,8 +36,12 @@ const Register = () => {
             return;
         }
         createUser(email, password)
-        .then(()=>{
+        .then((result)=>{
             toast.success("User created successfully")
+            profileUpdate(name, photo)
+            if(result.user){
+              navigate(location?.state || "/")
+            }
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
@@ -85,13 +97,16 @@ const Register = () => {
           <label className="label">
             <span className="label-text font-bold">Password</span>
           </label>
+          <div className="relative">
           <input
-            type="password"
+            type={showPassword? "text":"password"}
             name="password"
-            placeholder="Please create password"
-            className="input input-bordered"
+            placeholder="password"
+            className="input input-bordered w-full"
             {...register("password", { required: true })}
           />
+          <span className="absolute top-1/3 right-3 text-xl" onClick={()=>setShowPassword(!showPassword)}>{showPassword? <FaEye />:<FaEyeSlash/>}</span>
+          </div>
           {errors.password && <span className="text-red-600">This field is required</span>}
         </div>
         <div className="form-control mt-6">

@@ -1,0 +1,42 @@
+ [
+      {
+        "id": 1,
+        "name": "Cozy Cottage",
+        "userName": "Alice",
+        "occupation": "Graphic Designer",
+        "rating": 4.5,
+        "comment": "Lovely cottage, perfect for a relaxing getaway in a serene environment. Enjoyed every moment spent here, would definitely recommend!",
+        "date": "10-04-2024",
+        "img":"https://i.ibb.co/XS79B3v/Alice.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Modern Loft",
+        "userName": "David",
+        "occupation": "Software Engineer",
+        "rating": 3.8,
+        "comment": "Stunning view, although noise from the street can occasionally disrupt the tranquility. Overall, a comfortable living space with modern amenities.",
+        "date": "08-04-2024",
+        "img":"https://i.ibb.co/HP4wLKF/David.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Family Home",
+        "userName": "Carol",
+        "occupation": "Teacher",
+        "rating": 5.0,
+        "comment": "Spacious home, perfect for raising children. Well-maintained and in a family-friendly neighborhood. Couldn't be happier with our choice!",
+        "date": "12-04-2024",
+        "img":"https://i.ibb.co/xhQjhXz/Carol.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Rustic Cabin",
+        "userName": "Eve",
+        "occupation": "Writer",
+        "rating": 4.2,
+        "comment": "Cozy cabin nestled in breathtaking natural surroundings. Ideal for a peaceful retreat away from the hustle and bustle of city life.",
+        "date": "14-04-2024",
+        "img":"https://i.ibb.co/pv3WqVg/Eve.jpg"
+      }
+    ]

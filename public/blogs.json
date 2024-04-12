@@ -1,0 +1,40 @@
+[
+      {
+        "id": 1,
+        "title": "The Importance of Location in Real Estate",
+        "author": "John Smith",
+        "date": "2024-04-01",
+        "category": "Real Estate Tips",
+        "tags": ["location", "property-value"],
+        "content": "Choosing the right location is crucial when buying a home. Factors such as proximity to schools, shopping centers, and transportation can greatly affect property value. In this blog post, we explore the significance of location in residential real estate and provide tips for finding the perfect neighborhood."
+      },
+      {
+        "id": 2,
+        "title": "Top 10 Tips for First-Time Homebuyers",
+        "author": "Emily Johnson",
+        "date": "2024-03-15",
+        "category": "Homebuying Advice",
+        "tags": ["mortgage", "real estate agent"],
+        "content": "Buying your first home can be overwhelming. In this blog post, we share our top 10 tips for first-time homebuyers, including getting pre-approved for a mortgage, researching neighborhoods, and working with a real estate agent. Follow these tips to make your home buying process smoother and less stressful."
+      },
+      {
+        "id": 3,
+        "title": "The Future of Smart Homes in Real Estate",
+        "author": "Michael Brown",
+        "date": "2024-02-28",
+        "category": "Technology Trends",
+        "tags": ["smart home", "home automation"],
+        "content": "Smart home technology is revolutionizing the real estate industry. From automated lighting and thermostats to security systems and voice-controlled assistants, smart features are becoming increasingly popular among homebuyers. In this blog post, we discuss the future of smart homes in residential real estate and how they can enhance comfort, convenience, and security for homeowners."
+      },
+      {
+        "id": 4,
+        "title": "Tips for Selling Your Home Quickly",
+        "author": "Sarah Adams",
+        "date": "2024-05-10",
+        "category": "Selling Strategies",
+        "tags": ["home selling", "real estate market"],
+        "content": "Selling your home can be a stressful process, but there are strategies you can use to speed up the sale. In this blog post, we share tips for selling your home quickly, including staging techniques, pricing strategies, and marketing tips. Implement these strategies to attract more buyers and sell your home faster."
+      }
+    ]
+
+  
