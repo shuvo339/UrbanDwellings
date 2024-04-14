@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";

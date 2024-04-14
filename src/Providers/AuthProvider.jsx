@@ -1,8 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.config";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, GithubAuthProvider} from "firebase/auth";
+import {createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, GithubAuthProvider} from "firebase/auth";
 import PropTypes from 'prop-types';
-import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 export const AuthContext = createContext(null)
 
 const AuthProvider = ({children}) => {
@@ -31,7 +30,7 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, githubProvider)
     }
     const profileUpdate = (name, photo)=>{
-       return UpdateProfile(auth.currentUser, {
+       return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo
           })
     }

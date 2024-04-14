@@ -1,15 +1,28 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
 import { Helmet } from "react-helmet-async";
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 const UpdateProfile = () => {
+  const {profileUpdate, user} = useAuth();
     const {
         register,
         handleSubmit,
-        formState: { errors },
       } = useForm();
       const onSubmit = (data) => {
-        const {name, photo} = data;
+        let {name, photo} = data;
+        if(name === ''){
+          name = `${user?.displayName}`
+        }
+        if(photo === ''){
+          photo = `${user?.photoURL}`
+        }
+        console.log(user.displayName)
+        profileUpdate(name,photo)
+        .then(()=>{
+          toast.success("Profile updated successfully")
+        })
+
       }
     return (
         <div className="w-3/4 md:w-1/2 mx-auto mt-8">
@@ -56,6 +69,7 @@ const UpdateProfile = () => {
         </div>
         <button className="btn bg-[#7E5E60] text-white">Save the Changes</button>
         </form>
+        <ToastContainer />
         </div>
     );
 };

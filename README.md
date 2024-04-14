@@ -1,8 +1,19 @@
-# React + Vite
+# B9A9-UrbanDwellings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Top features of the website
+* Extensive property catalog with diverse genres
+* User-friendly property search
+* Informative articles, guides, and resources related to real estate
+* User reviews and ratings for informed decisions
+* Mobile and tablet-friendly design for on-the-go reading.
 
-Currently, two official plugins are available:
+# npm packages used for the task
+* React Hook form
+* Swiper slider
+*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## [ Private Repo Link](https://github.com/programming-hero-web-course-4/b9a9-real-estate-shuvo339)
+
+## [ Live Link]()
+
+

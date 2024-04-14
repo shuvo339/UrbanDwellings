@@ -5,7 +5,6 @@ import userPic from '../../../assets/user.jpg'
 
 const Navbar = () => {
   const {user, logOut} = useAuth();
-  console.log(user)
     const navLinks = <>
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/">Home</NavLink></li>
     <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/update">Update Profile</NavLink></li>
@@ -59,7 +58,7 @@ const Navbar = () => {
         user? <div className="flex gap-3"> 
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img alt="Tailwind CSS Navbar component" src={user?.photoURL || userPic} />
+              <img title={`${user?.displayName}`} alt="Tailwind CSS Navbar component" src={user?.photoURL || userPic} />
             </div>
       </div>
             <button onClick={handleSignout} className="btn bg-[#7E5E60] text-white">Logout</button>
