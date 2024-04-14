@@ -17,7 +17,6 @@ const UpdateProfile = () => {
         if(photo === ''){
           photo = `${user?.photoURL}`
         }
-        console.log(user.displayName)
         profileUpdate(name,photo)
         .then(()=>{
           toast.success("Profile updated successfully")

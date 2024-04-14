@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Estates = ({estate}) => {
     const {id,image, estate_title, segment_name, price, area, location, status, facilities}=estate;
     return (
-        <div className="border p-4 rounded-lg shadow-md space-y-3">
+        <div data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400" className="border p-4 rounded-lg shadow-md space-y-3">
             <img className='rounded-md w-full h-72' src={image} alt="" />
             <h2 className="text-2xl font-semibold">{estate_title}</h2>
             <h2 className="text-xl font-medium">{segment_name}</h2>

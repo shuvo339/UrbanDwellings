@@ -10,7 +10,7 @@
 # npm packages used for the task
 * React Hook form
 * Swiper slider
-*
+* AOS package
 
 ## [ Private Repo Link](https://github.com/programming-hero-web-course-4/b9a9-real-estate-shuvo339)
 
