@@ -12,7 +12,6 @@ const Navbar = () => {
     {
       user? <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/user">User Profile</NavLink></li>: ''
     }
-    <li><NavLink className={({isActive})=>isActive? 'px-3 py-2 rounded-lg bg-sandstone-beige border-2 border-warm-taupe font-semibold':'border px-3 py-2 rounded-xl'} to="/contact">Contact Us</NavLink></li>
     </>
 
 

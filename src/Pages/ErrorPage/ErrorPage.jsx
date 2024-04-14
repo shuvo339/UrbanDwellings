@@ -20,11 +20,6 @@ const ErrorPage = () => {
             BACK TO HOME
           </button>
         </Link>
-        <Link to="/contact">
-          <button className="px-4 py-2 border-2 border-black">
-            CONTACT US
-          </button>
-        </Link>
       </div>
     </div>
   );
