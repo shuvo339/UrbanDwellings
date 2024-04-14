@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 const EstateDetails = () => {
     const estates = useLoaderData();
@@ -5,6 +6,9 @@ const EstateDetails = () => {
     const estate = estates?.find((estate) => estate.id == id);
     return (
         <div className="flex flex-col md:flex-row gap-8 my-8">
+            <Helmet>
+                <title>UrbanDwellings | Estate</title>
+            </Helmet>
             <div className="flex-1">
                 <img className="rounded-md h-full w-full" src={estate.image} alt="" />
             </div>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const BlogDetails = () => {
@@ -6,6 +7,9 @@ const BlogDetails = () => {
     const blog = blogs?.find((blog) => blog.id == id);
     return (
         <div className="border-2 shadow-lg p-6 space-y-2 rounded-xl bg-slate-100 lg:w-2/3 my-8 mx-auto text-center">
+          <Helmet>
+                <title>UrbanDwellings | Blog</title>
+            </Helmet>
         <h2 className="text-xl font-semibold">Title: {blog.title}</h2>
         <p>By: <span className="font-semibold">{blog.author}</span></p>
         <p>Publish Date: <span className="font-semibold">{blog.date}</span></p>

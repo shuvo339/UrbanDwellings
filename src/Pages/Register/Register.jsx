@@ -6,6 +6,7 @@ import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useLocation,  useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -52,6 +53,9 @@ const Register = () => {
     
     return (
         <div className="card shrink-0 w-3/4 md:w-1/2 mx-auto shadow-2xl bg-base-100 mb-4 mt-6">
+          <Helmet>
+                <title>UrbanDwellings | Register</title>
+            </Helmet>
             <h2 className="text-2xl md:text-4xl font-semibold text-center">Register</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body space-y-2">
         <div className="form-control">

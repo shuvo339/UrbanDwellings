@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useLocation,  useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -58,6 +59,9 @@ const Login = () => {
     
     return (
         <div className="card shrink-0 w-3/4 md:w-1/2 mx-auto shadow-2xl bg-base-100 mt-8">
+          <Helmet>
+                <title>UrbanDwellings | Login</title>
+            </Helmet>
             <h2 className="text-2xl md:text-4xl font-semibold text-center">Login</h2>
       <form onSubmit={handleSubmit(onSubmit)} className="card-body space-y-4">
         <div className="form-control">

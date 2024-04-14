@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const {
@@ -12,6 +13,9 @@ const UpdateProfile = () => {
       }
     return (
         <div className="w-3/4 md:w-1/2 mx-auto mt-8">
+            <Helmet>
+                <title>UrbanDwellings | Update</title>
+            </Helmet>
             <h2 className="text-3xl font-medium text-center">Update Profile</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="card-body space-y-2">
         <div className="form-control">

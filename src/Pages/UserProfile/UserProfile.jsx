@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   return (
     <div className="flex flex-col items-center justify-center space-y-3 mt-10">
+            <Helmet>
+                <title>UrbanDwellings | User</title>
+            </Helmet>
       <div className="avatar">
         <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           {/* <img src={user} /> */}
