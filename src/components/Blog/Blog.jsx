@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Blog = ({blog}) => {
     const {title, author, date, category, tags, id} = blog;
     return (
-        <div data-aos="fade-up-left" data-aos-duration="1000" className="border-2 shadow-lg p-6 space-y-2 rounded-xl bg-slate-100">
+        <div data-aos="fade-up-left" data-aos-duration="1000" className="border-2 shadow-lg p-4 space-y-2 rounded-xl bg-slate-100">
             <h2 className="text-xl font-semibold">Title: {title}</h2>
             <p>By: <span className="font-semibold">{author}</span></p>
             <p>Publish Date: <span className="font-semibold">{date}</span></p>

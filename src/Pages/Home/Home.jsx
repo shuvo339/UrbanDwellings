@@ -16,7 +16,7 @@ const Home = () => {
             <div className="my-16 space-y-3">
                 <h2 className="text-3xl text-center font-semibold">Find Your Ideal Home: <br />Explore Our Listings</h2>
                 <p className="text-center max-w-[500px] mx-auto pb-8 opacity-85 ">Browse our diverse real estate listings for homes tailored to your needs and budget. Start your journey to homeownership now.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {
                         estates.map(estate=><Estates key={estate.id} estate={estate}></Estates>)
                     }

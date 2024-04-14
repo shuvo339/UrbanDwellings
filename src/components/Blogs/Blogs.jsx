@@ -11,7 +11,7 @@ const Blogs = () => {
     return (
         <div className="flex flex-col items-center mt-12">
             <h2 className="text-3xl font-semibold">Popular Blogs</h2>
-            <div className="grid lg:grid-cols-2 gap-6 my-6 w-full">
+            <div className="grid lg:grid-cols-2 gap-3 lg:gap-6 my-6 w-full">
                 {
                     blogs?.map(blog=><Blog key={blog.id} blog={blog}></Blog>)
                 }
