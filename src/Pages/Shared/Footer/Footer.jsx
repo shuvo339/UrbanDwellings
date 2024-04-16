@@ -8,23 +8,23 @@ const Footer = () => {
                 <aside className="items-center justify-center flex flex-col">
                    <img className="mx-auto" src={logoImg} alt="" />
                    <img className="mx-auto" src={logoName} alt="" />
-                   <p>Providing reliable tech since 2022</p>
+                   <p>Providing reliable services since 2022</p>
                 </aside>
                 <nav>
                     <h6 className="footer-title">Services</h6>
-                    <a className="link link-hover mr-4">Design</a>
-                    <a className="link link-hover mr-4">Marketing</a>
-                    <a className="link link-hover mr-4">Advertisement</a>
+                    <a className="link link-hover mr-6">Design</a>
+                    <a className="link link-hover mr-6">Marketing</a>
+                    <a className="link link-hover mr-6">Advertisement</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Company</h6>
-                    <a className="link link-hover mr-4">About us</a>
-                    <a className="link link-hover mr-4">Contact</a>
+                    <a className="link link-hover mr-6">About us</a>
+                    <a className="link link-hover mr-6">Contact</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">Legal</h6>
-                    <a className="link link-hover mr-4">Terms of use</a>
-                    <a className="link link-hover mr-4">Privacy policy</a>
+                    <a className="link link-hover mr-6">Terms of use</a>
+                    <a className="link link-hover mr-6">Privacy policy</a>
                 </nav>
             </footer>
             <footer className="px-10 py-4 border-t bg-base-200 text-base-content border-base-300">

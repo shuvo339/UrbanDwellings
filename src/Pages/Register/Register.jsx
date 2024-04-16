@@ -41,7 +41,9 @@ const Register = () => {
             toast.success("User created successfully")
             profileUpdate(name, photo)
             if(result.user){
-              navigate(location?.state || "/")
+              setTimeout(()=>{
+                navigate(location?.state || "/")
+              }, 3000)
             }
         })
         .catch(error=>{

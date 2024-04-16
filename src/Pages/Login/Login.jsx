@@ -26,7 +26,9 @@ const Login = () => {
         signIn(email, password)
         .then(()=>{
             toast.success("You have logged in successfully")
-            navigate(location?.state ? location.state : '/')
+            setTimeout(()=>{
+              navigate(location?.state ? location.state : '/')
+            }, 3000)
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
@@ -37,7 +39,9 @@ const Login = () => {
         googleSignin()
         .then(()=>{
             toast.success("You have logged in successfully")
-            navigate(location?.state ? location.state : '/')
+            setTimeout(()=>{
+              navigate(location?.state ? location.state : '/')
+            }, 3000)
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
@@ -47,7 +51,9 @@ const Login = () => {
         githubSignin()
         .then(()=>{
             toast.success("You have logged in successfully")
-            navigate(location?.state ? location.state : '/')
+            setTimeout(()=>{
+              navigate(location?.state ? location.state : '/')
+            }, 3000)
         })
         .catch(error=>{
            toast.error(error.message.split(":")[1])
